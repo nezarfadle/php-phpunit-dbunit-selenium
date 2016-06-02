@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^5.3",
+        "se/selenium-server-standalone": "^2.53",
+        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/dbunit": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

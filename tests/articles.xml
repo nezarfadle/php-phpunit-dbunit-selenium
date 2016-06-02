@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <articles id="1" title="VB.net" />
+    <articles id="2" title="C#" />
+    <articles id="3" title="PHP" />
+</dataset>
