@@ -31,6 +31,10 @@ git clone https://github.com/nezarfadle/phpunit-testsuite.git
 
 ``` $this->setBrowserUrl('http://localhost:9090'); ```
 
+* Go to your ```/working folder/tests/ArticleDaoTest.php``` line ( 16 ) and set the Database credentials
+
+``` $pdo = new \PDO('mysql:host=localhost;dbname=unittestingdb', 'root', 'password'); ```
+
 * Go to your working folder and run Selenium
 
 ```java -jar vendor/se/selenium-server-standalone/bin/selenium-server-standalone.jar```
