@@ -4,9 +4,9 @@ class ArticleModel
 {
 	private $title;
 
-	public function __construct($t)
+	public function __construct($title)
 	{
-		$this->title = $t;
+		$this->title = $title;
 	}
 
 	public function title()

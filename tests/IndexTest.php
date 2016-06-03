@@ -1,15 +1,19 @@
 <?php  namespace Tests;
 
+/**
+ * User-Interface Testing
+ */
+
 class IndexTest extends \PHPUnit_Extensions_Selenium2TestCase
 {
 	public static $browsers = [
 		['browserName' => 'phantomjs'],	
-		// ['browserName' => 'firefox'],
+		// ['browserName' => 'firefox'], // Uncomment this line if you want to test your code with Firefox
 	];
 	protected function setUp()
     {
         // $this->setBrowser('phantomjs');
-        $this->setBrowserUrl('http://localhost:9090/');
+        $this->setBrowserUrl('http://localhost:9090');
     }
 	public function testLandingPageHasAwelcomeMessage()
 	{

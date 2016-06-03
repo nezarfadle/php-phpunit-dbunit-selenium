@@ -1,12 +1,17 @@
 <?php namespace Tests;
 
+/**
+ * Database Testing 
+ */
+
 use Articles\ArticleDao;
 
 class ArticleDaoTest extends \PHPUnit_Extensions_Database_TestCase
 {
 
 	const TOTALROWSCOUNT = 3;
-	public function getConnection()
+	
+    public function getConnection()
     {
         $pdo = new \PDO('mysql:host=localhost;dbname=unittestingdb', 'root', 'password');
         return $this->createDefaultDBConnection($pdo);
@@ -17,21 +22,21 @@ class ArticleDaoTest extends \PHPUnit_Extensions_Database_TestCase
      */
     public function getDataSet()
     {
-        return $this->createFlatXMLDataSet(dirname(__FILE__).'/articles.xml');
-        // return new \PHPUnit_Extensions_Database_DataSet_DefaultDataSet();
+        return $this->createFlatXMLDataSet(dirname(__FILE__).'/articles.seed.xml');
+        // return new \PHPUnit_Extensions_Database_DataSet_DefaultDataSet(); // Uncomment this line in case if you want an empty DataSet
     }
 
     public function testInsertNewArticle()
     {
 
     	$uow = new ArticleDao();
-    	$count = $this->getConnection()->getRowCount('articles');
-    	$this->assertEquals( $this::TOTALROWSCOUNT, $count);
+    	$rowsCount = $this->getConnection()->getRowCount('articles'); // Rows count in the articles table should be 3
+    	$this->assertEquals( $this::TOTALROWSCOUNT, $rowsCount);
 
-    	$uow->insert("Java");
+    	$uow->insert("Java"); // insert new record in the database
 
-    	$count = $this->getConnection()->getRowCount('articles');
-    	$this->assertEquals( $this::TOTALROWSCOUNT + 1, $count);
+    	$rowsCount = $this->getConnection()->getRowCount('articles');
+    	$this->assertEquals( $this::TOTALROWSCOUNT + 1, $rowsCount); // Rows count in the articles table should be 4
     }
 
 }

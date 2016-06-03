@@ -14,8 +14,8 @@ class ArticleDao
 
 	function insert($title)
 	{
-		$s = $this->pdo->prepare("INSERT INTO articles(title) values(:t)");
-		$s->bindParam(':t', $title);
+		$s = $this->pdo->prepare("INSERT INTO articles(title) values(:title)");
+		$s->bindParam(':title', $title);
 		$s->execute();
 	}
 }
