@@ -25,7 +25,7 @@ git clone https://github.com/nezarfadle/phpunit-testsuite.git
 * Import the ```database.sql``` file into the ```unittestingdb``` database.
 * Install the dependencies by running Composer
 
-```composer install```
+``` php ./composer.phar install ```
 
 * Go to your ```/working folder/tests/IndexTest.php``` line ( 16 ) and modify the URL to suit your custom URL
 
