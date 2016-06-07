@@ -4,7 +4,7 @@ This is a "Hello World!" Unit testing, And it shows:
  2. How to write Database Tests using PHPUnit and DbUnit.
  3. How to write User Interface Tests using PHPUnit and Selenium.
 
-# Setup
+# Usage
 
 * [Download phantomjs](http://phantomjs.org/download.html) and save it in your path, Ex. 
 
